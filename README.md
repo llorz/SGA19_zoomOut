@@ -1,9 +1,7 @@
 # ZoomOut: Spectral Upsampling for Efficient Shape Correspondence
 This is an example code for the paper "ZoomOut: Spectral Upsampling for Efficient Shape Correspondence" by Simone Melzi, Jing Ren, Emanuele Rodolà, Abhishek Sharma, Peter Wonka, and Maks Ovsjanikov.
 
-In this paper, we propose a new regularizer, the complex resolvent Laplacian commutativity, for functional map pipeline. This term is
-theoretically justified and can improve the quality of the computed functional maps and the corresponding recovered point-wise maps
-before and after refinement.
+In this paper, we propose a very simple and efficient map refinement method called "zoomOut" for refining maps or correspondences by iterative upsampling in the spectral domain.
 
 <p align="center">
   <img align="center"  src="/figs/eg_cat_wolf.png">
