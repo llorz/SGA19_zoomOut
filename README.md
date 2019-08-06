@@ -45,6 +45,6 @@ T12_refined = zoomOut_refine_fast(S1, S2, T12, para, seed)
 Comments
 -------------------------
 - The script ```eg1_cat_wolf.m``` shows how to use the above function (to reproduce the Fig.2 in our paper). 
-- The script ```eg2_self_symmetry``` shows how to compute self-symmetric maps for human shapes.
+- The script ```eg2_self_symmetry.m``` shows how to compute self-symmetric maps for human shapes.
 - You can also find the code for initial map computation (both for self-symmetric maps or maps between two shapes) [here](https://github.com/llorz/SGA18_orientation_BCICP_code)
-- Please let us know (jing.ren@kaust.edu.sa, melzismn@gmail.com) if you have any question regarding the algorithms/paper (๑‾ ꇴ ‾๑) or you find any bugs in the code ʃ͠ʘɷʘ͠ƪ
+- Please let us know (jing.ren@kaust.edu.sa, melzismn@gmail.com) if you have any question regarding the algorithms/paper ୧((〃•̀ꇴ•〃))૭⁺✧ or you find any bugs in the code ʃ͠ʘɷʘ͠ƪ
