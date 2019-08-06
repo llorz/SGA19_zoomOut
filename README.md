@@ -1,12 +1,12 @@
-# Structured Regularization of Functional Map Computations
-This is an example code for the paper "Structured Regularization of Functional Map Computations" by Jing Ren, Mikhail Panine, Peter Wonka and Maks Ovsjanikov.
+# ZoomOut: Spectral Upsampling for Efficient Shape Correspondence
+This is an example code for the paper "ZoomOut: Spectral Upsampling for Efficient Shape Correspondence" by Simone Melzi, Jing Ren, Emanuele Rodol\`a, Abhishek Sharma, Peter Wonka and Maks Ovsjanikov.
 
 In this paper, we propose a new regularizer, the complex resolvent Laplacian commutativity, for functional map pipeline. This term is
 theoretically justified and can improve the quality of the computed functional maps and the corresponding recovered point-wise maps
 before and after refinement.
 
 <p align="center">
-  <img align="center"  src="/figs/example.png" width="400">
+  <img align="center"  src="/figs/eg_cat_wolf.png" width="400">
 </p>
 
 
@@ -36,4 +36,4 @@ Comments
 - The script ```example.m``` shows how to use the above function (to reproduce the Fig.2 in our paper). 
 - You can find our paper [here](https://www.dropbox.com/s/ctvor2e25eaaev6/2019SGP_Structured_Regularization_fMap.pdf?dl=0)
 - The dataset used in the paper can be found [here](https://github.com/llorz/SGA18_orientation_BCICP_dataset)
-- Please let us know (jing.ren@kaust.edu.sa) if you have any question regarding the algorithms/paper ฅ^•ﻌ•^ฅ or you find any bugs in the code \_(°ω°｣∠)\_
+- Please let us know (jing.ren@kaust.edu.sa, melzismn@gmail.com) if you have any question regarding the algorithms/paper ฅ^•ﻌ•^ฅ or you find any bugs in the code \_(°ω°｣∠)\_
