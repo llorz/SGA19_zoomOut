@@ -1,5 +1,5 @@
 # ZoomOut: Spectral Upsampling for Efficient Shape Correspondence
-This is an example code for the paper "ZoomOut: Spectral Upsampling for Efficient Shape Correspondence" by Simone Melzi, Jing Ren, Emanuele Rodol\`a, Abhishek Sharma, Peter Wonka and Maks Ovsjanikov.
+This is an example code for the paper "ZoomOut: Spectral Upsampling for Efficient Shape Correspondence" by Simone Melzi, Jing Ren, Emanuele Rodolà, Abhishek Sharma, Peter Wonka, and Maks Ovsjanikov.
 
 In this paper, we propose a new regularizer, the complex resolvent Laplacian commutativity, for functional map pipeline. This term is
 theoretically justified and can improve the quality of the computed functional maps and the corresponding recovered point-wise maps
@@ -10,30 +10,43 @@ before and after refinement.
 </p>
 
 
-Main Function
+Main Functions
 --------------------
 ```
-[C12, Mask] = compute_fMap_complRes(S1,S2,B1,B2,Ev1,Ev2,fct1,fct2,mask_type)
+T12_refined = zoomOut_refine(B1, B2, T12, para)
 
 % Input:
-%   S1: the source mesh with the new basis B1, and the corresponding eigenvalues Ev1 (k1 Eigen-functions)
-%   S2: the target mesh with the new basis B2, and the corresponding eigenvalues Ev2 (k2 Eigen-functions)
-%   fct1: the descriptors of shape S1
-%   fct2: the descriptors of shape S2
-%   mask_type: 'standard', 'slant', or 'complRes' 
+%   B1: The LB basis of the source shape S1
+%   B2: The LB basis of the target shape S2
+%   T12: the initial point-wise map from S1 to S2
+%   para: a structure stores the following parameters
+%       k_init: the initial dimension of functional map
+%       k_step: the step size of chaning the functional map
+%       k_final: the final dimension (zoomOut) of the functional map
 % Output:
-%   C12: a functional map from S1 -> S2 (k2-by-k1 matrix)
-%   Mask: the penalty mask used to regularize C12
+%   T12_refined: the refined point-wise map
 ```
-- Compute a functional map with different penalty mask term:
-  - "**standard**": the standard Laplacian commutativity term (formulated as a mask)
-  - "**slant**": a heuristic slanted diagonal penalty mask proposed in ["Partial Functinal Correspondences"](https://arxiv.org/abs/1506.05274)
-  - "**complRes**": our proposed complex resolvent Laplacian mask
 
+```
+T12_refined = zoomOut_refine_fast(S1, S2, T12, para, seed)
+
+% Input:
+%   S1: The source shape S1 with precomputed LB basis
+%   S2: The target shape S2 with precomputed LB basis
+%   T12: the initial point-wise map from S1 to S2
+%   para: a structure stores the following parameters
+%       k_init: the initial dimension of functional map
+%       k_step: the step size of chaning the functional map
+%       k_final: the final dimension (zoomOut) of the functional map
+%       num_samples: the sampling density to speed-up the zoomOut refinement
+%   seed: the seed for the random sampling
+% Output:
+%   T12_refined: the refined point-wise map
+```
 
 Comments
 -------------------------
-- The script ```example.m``` shows how to use the above function (to reproduce the Fig.2 in our paper). 
-- You can find our paper [here](https://www.dropbox.com/s/ctvor2e25eaaev6/2019SGP_Structured_Regularization_fMap.pdf?dl=0)
-- The dataset used in the paper can be found [here](https://github.com/llorz/SGA18_orientation_BCICP_dataset)
-- Please let us know (jing.ren@kaust.edu.sa, melzismn@gmail.com) if you have any question regarding the algorithms/paper ฅ^•ﻌ•^ฅ or you find any bugs in the code \_(°ω°｣∠)\_
+- The script ```eg1_cat_wolf.m``` shows how to use the above function (to reproduce the Fig.2 in our paper). 
+- The script ```eg2_self_symmetry``` shows how to compute self-symmetric maps for human shapes.
+- You can also find the code for initial map computation (both for self-symmetric maps or maps between two shapes) [here](https://github.com/llorz/SGA18_orientation_BCICP_code)
+- Please let us know (jing.ren@kaust.edu.sa, melzismn@gmail.com) if you have any question regarding the algorithms/paper (๑‾ ꇴ ‾๑) or you find any bugs in the code ʃ͠ʘɷʘ͠ƪ
