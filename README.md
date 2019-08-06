@@ -6,7 +6,7 @@ theoretically justified and can improve the quality of the computed functional m
 before and after refinement.
 
 <p align="center">
-  <img align="center"  src="/figs/eg_cat_wolf.png" width="400">
+  <img align="center"  src="/figs/eg_cat_wolf.png">
 </p>
 
 
