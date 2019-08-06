@@ -1,0 +1,8 @@
+function [ Idx, idx ] = descCluster( shape, k)
+%DESCCLUSTER segment the shape in k clusters in descriptor space and
+%compute connected components within each cluster
+%   Detailed explanation goes here
+
+
+end
+
