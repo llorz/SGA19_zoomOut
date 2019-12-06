@@ -51,6 +51,7 @@ Comments
 - **(update 2019-10-14)** As pointed out by **@jayis520**, you might get different results from ours for the **cat-dog** example. The reason might be that your computed LB basis of the cat and the wolf does not align in the same way as ours. In this case, please change line 27 in the script ```eg1_cat_wolf.m``` to ```C12_ini = diag([1, -1, -1, -1])``` for example to align the first four basis of the cat with the wolf that are computed in your machine. Please check the [issue](https://github.com/llorz/SGA19_zoomOut/issues/1) for more explanation. Sorry for the confusion :(
 
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License
